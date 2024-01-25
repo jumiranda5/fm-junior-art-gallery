@@ -10,7 +10,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             chunks: ['index'],
-            template: 'src/index.html',
+            template: 'src/page-home/index.html',
             favicon: 'src/assets/images/favicon-32x32.png'
         }),
         new HtmlWebpackPlugin({
