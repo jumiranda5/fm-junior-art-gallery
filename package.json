@@ -4,7 +4,7 @@
   "description": "Development environment for static web pages",
   "private": true,
   "scripts": {
-    "start": "webpack serve --open --config webpack.dev.js",
+    "start": "webpack serve --port 3000 --open --config webpack.dev.js",
     "dev": "webpack --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
