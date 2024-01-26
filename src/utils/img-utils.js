@@ -4,8 +4,9 @@
 
 export const createPicture = (containerId, imgObj, altText) => {
 
-    // get lazy container from the dom
+    // get lazy container from the dom and add background
     const container = document.getElementById(containerId);
+    container.style.backgroundImage = `url(${imgObj.tn})`;
 
     // create picture tag
     const picture = document.createElement('PICTURE');
@@ -18,17 +19,17 @@ export const createPicture = (containerId, imgObj, altText) => {
 
     // Desktop
     srcDesk.media = "(min-width: 1200px)";
-    srcDesk.srcset = `${imgObj.desk} 1x, ${imgObj.desk2x} 2x`;
+    srcDesk.dataset.src = `${imgObj.desk} 1x, ${imgObj.desk2x} 2x`;
 
     // Tablet
     srcTablet.media = "(min-width: 768px)";
-    srcTablet.srcset = `${imgObj.tablet} 1x, ${imgObj.tablet2x} 2x`;
+    srcTablet.dataset.src = `${imgObj.tablet} 1x, ${imgObj.tablet2x} 2x`;
 
     // Mobile
-    srcMob.srcset = `${imgObj.mob} 1x, ${imgObj.mob2x} 2x`;
+    srcMob.dataset.src = `${imgObj.mob} 1x, ${imgObj.mob2x} 2x`;
 
     // Default
-    img.src = imgObj.mob;
+    img.dataset.src = imgObj.mob;
     img.alt = altText;
 
     // Append
@@ -37,4 +38,62 @@ export const createPicture = (containerId, imgObj, altText) => {
     picture.appendChild(srcMob);
     picture.appendChild(img);
     container.appendChild(picture);
+};
+
+
+// Set observer (loading=lazy does not work with imgs added via js)
+
+export const setObserver = () => {
+
+    /* eslint-disable no-console*/
+
+    const options = {
+        root: null, // Use the viewport as the root
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+    
+    const lazy = document.querySelectorAll(".lazy-img");
+    
+    const handleIntersection = (entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+
+                console.log(`Is intersecting: ${entry.target.id}`);
+
+                const div = entry.target;
+                const pic = div.firstElementChild;
+                const img = pic.lastElementChild;
+
+                // Replace the placeholder with the actual image source
+                pic.childNodes.forEach((element) => {
+                    const src = element.dataset.src;
+                    if (element.tagName === "SOURCE") element.srcset = src;
+                    else element.src = src;
+                });
+                
+                // remove blur after the img is loaded
+                if (img.complete) {
+                    div.classList.add("loaded");
+                } 
+                else {
+                    img.addEventListener("load", () => div.classList.add("loaded"));
+                }
+    
+                // Stop observing the image
+                observer.unobserve(div);
+            }
+            else {
+                console.log(`NOT intersecting: ${entry.target.id}`);
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+    
+    lazy.forEach((div) => {
+        console.log(`observe: ${div.tagName} => ${div.id}`);
+        observer.observe(div);
+    });
+
 };
