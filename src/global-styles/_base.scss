@@ -1,0 +1,30 @@
+@font-face {
+    font-family: Outfit;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url(../assets/fonts/Outfit/Outfit-VariableFont_wght.ttf) 
+         format('truetype');
+}
+
+@font-face {
+    font-family: BigShouldersDisplay;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url(../assets/fonts/Big_Shoulders_Display/BigShouldersDisplay-VariableFont_wght.ttf) 
+         format('truetype');
+}
+
+:root {
+    --clr-brown: #D5966C;
+    --clr-black: #151515;
+    --clr-white: #FFFFFF;
+    --clr-dark-gray: #444444;
+
+    --font-main: Outfit, 'sans-serif';
+    --font-heading: BigShouldersDisplay, 'sans-serif';
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--clr-black);
+}

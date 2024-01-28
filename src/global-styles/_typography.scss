@@ -1,0 +1,59 @@
+.heading-xl,
+.heading-l,
+.heading-m,
+.heading-s {
+    font-family: var(--font-heading);
+    font-weight: 900;
+    line-height: 1;
+}
+
+.heading-xl {
+    font-size: 3.75rem;
+    line-height: 0.91;
+}
+
+
+.heading-l {
+    font-size: 3.125rem;
+}
+
+.heading-m {
+    font-size: 3.125rem;
+    line-height: 0.83;
+}
+
+.heading-s {
+    font-size: 2rem;
+}
+
+.body-m {
+    font-size: 1.125rem;
+    line-height: 1.45;
+}
+
+.body-s {
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+@media (min-width: 48em) {
+
+    .heading-xl { font-size: 4.375rem; }
+    
+    .heading-l { font-size: 3.4375rem; }
+
+}
+
+@media (min-width: 75em) {
+    .heading-xl { font-size: 6rem; }
+    
+    .heading-l { font-size: 4.375rem; }
+    
+    .heading-m { font-size: 3.75rem; }
+    
+    .heading-s { font-size: 2.25rem; }
+    
+    .body-m { font-size: 1.375rem; }
+    
+    .body-s { font-size: 1.125rem; }
+}
