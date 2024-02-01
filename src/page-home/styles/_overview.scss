@@ -1,0 +1,26 @@
+.overview-container {
+    margin: 7.5rem 0;
+}
+
+.section-activities,
+.section-visit {
+    grid-column: 2 / 3;
+}
+
+.overview-title {
+    margin: 1.5rem 0;
+}
+
+.wrapper-item.section-visit {
+    row-gap: 1rem;
+}
+
+.visit-text-container {
+    background-color: var(--clr-black);
+    padding: 1.5rem 1.5rem 3rem;
+}
+
+.visit-text-container,
+.visit-text-container .overview-title {
+    color: var(--clr-white);
+}

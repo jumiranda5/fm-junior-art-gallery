@@ -1,0 +1,12 @@
+
+.hero-img img {
+    min-height: 15rem;
+}
+
+.hero-img {
+    grid-column: 1 / -1;
+}
+
+.wrapper-item.hero-text-container {
+    gap: 2rem;
+}

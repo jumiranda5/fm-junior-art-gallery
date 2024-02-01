@@ -5,6 +5,8 @@
     font-family: var(--font-heading);
     font-weight: 900;
     line-height: 1;
+    color: var(--clr-black);
+    text-transform: uppercase;
 }
 
 .heading-xl {
@@ -19,7 +21,7 @@
 
 .heading-m {
     font-size: 3.125rem;
-    line-height: 0.83;
+    line-height: 0.9;
 }
 
 .heading-s {
@@ -29,6 +31,7 @@
 .body-m {
     font-size: 1.125rem;
     line-height: 1.45;
+    font-weight: 300;
 }
 
 .body-s {

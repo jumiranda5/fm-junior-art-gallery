@@ -2,6 +2,13 @@
 
 import { createPicture, setObserver } from '../utils/img-utils';
 
+// svg
+import ArrowRight from '../assets/images/icon-arrow-right.svg';
+import Logo from '../assets/images/logo-light.svg';
+
+document.getElementById('link-arrow').src = ArrowRight;
+document.getElementById('footer-logo').src = Logo;
+
 // mobile
 import Img1 from '../assets/images/mobile/image-grid-1.jpg';
 import Img1_2x from '../assets/images/mobile/image-grid-1@2x.jpg';
