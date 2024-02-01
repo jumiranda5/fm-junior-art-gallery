@@ -48,6 +48,18 @@ body {
     justify-items: start;
 }
 
+@media (min-width: 48em) {
+
+    .page-wrapper {
+        --gap: 0.625rem;
+        --page-padding: 2rem;
+
+        grid-template-columns: var(--page-padding) repeat(12, 1fr) var(--page-padding);
+        gap: var(--gap);
+    }
+
+}
+
 // Links
 
 .link {

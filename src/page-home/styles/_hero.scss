@@ -7,6 +7,29 @@
     grid-column: 1 / -1;
 }
 
-.wrapper-item.hero-text-container {
+.hero-text-container {
     gap: 2rem;
+}
+
+@media (min-width: 48em) {
+
+    .page-wrapper.section-hero {
+        align-items: center;
+    }
+
+    .hero-img,
+    .hero-text-container {
+        grid-row: 1 / -1;
+    }
+
+    .hero-img {
+        grid-column: 1 / span 8;
+
+        z-index: -1;
+    }
+
+    .hero-text-container {
+        grid-column: 8 / span 6;
+    }
+
 }
