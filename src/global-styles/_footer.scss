@@ -31,16 +31,31 @@ footer {
 @media (min-width: 48em) {
 
     footer {
-        padding: 3rem 2.625rem;
+        padding: 3.5rem 0;
     }
 
-    .footer-wrapper {
-        flex-direction: row;
-        gap: 0;
+    .footer-logo {
+        grid-column: 2 / span 3;
     }
 
     .footer-text {
-        margin: 0 auto 0 4rem;
-        max-width: 40%;
+        grid-column: 5 / span 5;
+        max-width: 37ch;
+    }
+    
+    .social-links {
+        grid-column: 11 / span 3;
+        margin-left: auto;
+    }
+
+}
+
+@media (min-width: 75em) {
+    footer {
+        padding: 5rem 0;
+    }
+
+    .footer-logo {
+        height: 3.625rem;
     }
 }

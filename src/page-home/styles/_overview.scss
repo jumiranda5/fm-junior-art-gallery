@@ -17,7 +17,7 @@
 
 .visit-text-container {
     background-color: var(--clr-black);
-    padding: 1.5rem 1.5rem 3rem;
+    padding: 1.5rem;
 }
 
 .visit-text-container,
@@ -33,6 +33,8 @@
 
 
 @media (min-width: 48em) {
+
+    // grid
 
     .wrapper-item.section-activities,
     .wrapper-item.section-visit {
@@ -71,9 +73,23 @@
         grid-column: 8 / span 5;
     }
 
+    // text containers
+
+    .overview-title {
+        margin: 0 0 1.5rem;
+    }
+
+    .activities-text-container,
     .visit-text-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+}
+
+
+@media (min-width: 75em) {
+    .overview-container {
+        margin: 11.25rem 0;
     }
 }

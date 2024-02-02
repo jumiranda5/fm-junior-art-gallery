@@ -60,6 +60,15 @@ body {
 
 }
 
+@media (min-width: 75em) {
+
+    .page-wrapper {
+        --gap: 1.875rem; //30px
+        --page-padding: 8.375rem; 
+    }
+
+}
+
 // Links
 
 .link {
