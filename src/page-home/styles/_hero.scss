@@ -3,11 +3,11 @@
     min-height: 15rem;
 }
 
-.hero-img {
+.wrapper-item.hero-img {
     grid-column: 1 / -1;
 }
 
-.hero-text-container {
+.wrapper-item.hero-text-container {
     gap: 2rem;
 }
 
@@ -16,6 +16,8 @@
     .page-wrapper.section-hero {
         align-items: center;
     }
+
+    // wrapper item
 
     .hero-img,
     .hero-text-container {
@@ -49,6 +51,8 @@
         background-color: var(--clr-black);
     }
 
+    // wrapper item 
+
     .hero-img {
         grid-column: 5 / span 6;
         z-index: 1;
@@ -62,6 +66,8 @@
 
         margin-bottom: 7.75rem;
     }
+
+    // text
 
     .hero-title {
         width: 100%;
