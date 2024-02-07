@@ -3,11 +3,13 @@
     min-height: 15rem;
 }
 
-.wrapper-item.hero-img {
+// wrapper item 
+
+.hero-img {
     grid-column: 1 / -1;
 }
 
-.wrapper-item.hero-text-container {
+.hero-text-container {
     gap: 2rem;
 }
 

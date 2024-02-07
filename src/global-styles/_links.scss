@@ -1,0 +1,47 @@
+
+.link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 3.6em;
+    background-color: var(--clr-black);
+    text-decoration: none;
+}
+
+.back-link {
+    flex-direction: row-reverse;
+}
+
+.link,
+.link-arrow {
+    transition: background-color .3s;
+}
+
+.link p {
+    padding: 0 1.6em;
+
+    color: var(--clr-white);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.182em;
+    text-transform: uppercase;
+}
+
+.link-arrow {
+    padding: 0 .8em;
+    height: 100%;
+
+    background-color: var(--clr-brown);
+    object-fit: none;
+}
+
+.link:hover,
+.link:focus {
+    background-color: var(--clr-brown);
+}
+
+.link:hover .link-arrow,
+.link:focus .link-arrow {
+    background-color: var(--clr-black);
+}
