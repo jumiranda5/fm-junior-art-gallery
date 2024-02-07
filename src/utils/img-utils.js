@@ -59,8 +59,6 @@ export const setObserver = () => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
 
-                console.log(`Is intersecting: ${entry.target.id}`);
-
                 const div = entry.target;
                 const pic = div.firstElementChild;
                 const img = pic.lastElementChild;
@@ -83,16 +81,12 @@ export const setObserver = () => {
                 // Stop observing the image
                 observer.unobserve(div);
             }
-            else {
-                console.log(`NOT intersecting: ${entry.target.id}`);
-            }
         });
     };
 
     const observer = new IntersectionObserver(handleIntersection, options);
     
     lazy.forEach((div) => {
-        console.log(`observe: ${div.tagName} => ${div.id}`);
         observer.observe(div);
     });
 
