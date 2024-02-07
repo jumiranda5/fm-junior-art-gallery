@@ -17,7 +17,7 @@ module.exports = {
             filename: 'location.html',
             chunks: ['location'],
             template: 'src/page-location/location.html',
-            favicon: 'src/assets/images/favicon-32x32.png'
+            // favicon: 'src/assets/images/favicon-32x32.png' => conflict (already generated on home)
         }),
         new ESLintPlugin(),
     ],
